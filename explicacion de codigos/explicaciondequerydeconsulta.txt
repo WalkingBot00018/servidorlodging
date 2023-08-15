@@ -1,0 +1,52 @@
+-Aquí se incluye un archivo llamado "conexion.php" que debería contener la lógica para establecer la conexión a la base de datos. Esto es importante para reutilizar la lógica de conexión en diferentes partes del código sin tener que duplicarla.
+
+// Incluye el archivo de conexión
+require_once "conexion.php";
+
+-Se define la consulta SQL que se va a ejecutar. En este caso, se seleccionan todos los campos (*) de la tabla llamada "cliente".
+
+// Realiza la consulta a la base de datos
+$result = mysqli_query($link, $query);
+
+-Aquí se ejecuta la consulta en la base de datos utilizando la función mysqli_query(). $link es la conexión a la base de datos establecida previamente y $query es la consulta SQL definida anteriormente. El resultado de la consulta se almacena en la variable $result.
+// Realiza la consulta a la base de datos
+$result = mysqli_query($link, $query);
+
+
+-En este bloque, se verifica si la consulta fue exitosa (if ($result)):
+
+Si la consulta fue exitosa, se imprime un encabezado <h2> para indicar "Resultados de la consulta:". Luego se crea una tabla HTML con un borde y una fila de encabezados de columna.
+
+Se utiliza un bucle while para recorrer cada fila de resultados devueltos por la consulta. Cada fila se imprime en una fila de la tabla HTML, mostrando los valores de las columnas "Nro_Documento", "Nombre" y "Apellido".
+
+Al final, se cierra la tabla HTML.
+
+Si la consulta no fue exitosa, se muestra un mensaje de error utilizando mysqli_error($link).
+
+if ($result) {
+    // Procesa y muestra los resultados de la consulta
+    echo "<h2>Resultados de la consulta:</h2>";
+    echo "<table border='1'>";
+    echo "<tr><th>Nro_Documento</th><th>Nombre</th><th>Apellido</th></tr>";
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo "<tr>";
+        echo "<td>" . $row['Nro_Documento'] . "</td>";
+        echo "<td>" . $row['Nombre'] . "</td>";
+        echo "<td>" . $row['Apellido'] . "</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
+} else {
+    echo "Error en la consulta: " . mysqli_error($link);
+}
+
+
+-Aquí se libera la memoria asociada con el resultado de la consulta utilizando mysqli_free_result(). Esto es importante para liberar recursos y evitar problemas de memoria.
+
+// Libera el resultado
+mysqli_free_result($result);
+
+
+-Finalmente, se cierra la conexión a la base de datos utilizando mysqli_close(). Esto garantiza que la conexión se cierre correctamente y libera recursos.
+// Cierra la conexión a la base de datos
+mysqli_close($link);

@@ -1,0 +1,24 @@
+-Se definen las credenciales de la base de datos, como el servidor, el nombre de usuario, la contraseña y el nombre de la base de datos a la que se desea conectar:
+
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'id21140238_rlsr');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'id21140238_baselodging');
+
+-Se intenta establecer una conexión a la base de datos utilizando las credenciales definidas anteriormente:
+
+$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+-Se verifica si la conexión fue exitosa o no utilizando una estructura condicional if. Si la conexión no fue exitosa, se imprime un mensaje de error y se termina el script:
+
+if ($link === false) {
+    die("ERROR: Could not connect." . mysqli_connect_error());
+} else {
+    echo "conecto";
+}
+
+
+-Si la conexión falla, el código die() imprimirá el mensaje de error junto con el motivo de la falla.
+Si la conexión es exitosa, se imprimirá "conecto" en la página.
+
+

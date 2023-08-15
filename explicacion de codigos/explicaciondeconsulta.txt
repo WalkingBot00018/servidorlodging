@@ -1,0 +1,31 @@
+- Se inicia el documento HTML con la declaración <!DOCTYPE html>, que especifica el tipo de documento HTML que se está utilizando.
+
+Se inicia el elemento <html> que encierra todo el contenido de la página web.
+
+Dentro del <head> se define la información que no se muestra directamente en la página, como el título de la pestaña del navegador y la referencia a un archivo de hoja de estilo (CSS)
+
+<head>
+    <title>Consulta a la Base de Datos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+
+
+-<title> establece el título de la pestaña del navegador.
+<link> referencia a un archivo de hoja de estilo llamado "estilo.css" que se utiliza para aplicar estilos visuales a la página.
+Se inicia el cuerpo del documento con el elemento <body>. Aquí es donde se coloca el contenido visible de la página web.
+
+Se utiliza el elemento <h2> para crear un encabezado de nivel 2 que dice "Realizar consulta SELECT".
+
+Se crea un formulario utilizando el elemento <form>. El formulario se configurará para enviar los datos ingresados al archivo "resultconsu.php" utilizando el método POST
+
+<form action="resultconsu.php" method="post">
+
+
+-Dentro del formulario, se coloca un botón de envío utilizando el elemento <input>. El botón se muestra con el texto "Realizar Consulta" y se le asigna la clase de estilo "boton"
+
+<input class="boton" type="submit" value="Realizar Consulta">
+
+- Se cierra el formulario y el cuerpo del documento
+</form>
+</body>
