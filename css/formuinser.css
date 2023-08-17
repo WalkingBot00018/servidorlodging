@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: bisque;
+    background-image: url("/img/fondo_formuinsert.jpg");
+}
+
+h2 {
+    color: #0d0d0d;
+    text-align: center;
+    margin-top: 40px;
+    font-family: sans-serif;
+}
+
+form {
+    width: 350px;
+    height: 650px;
+    margin: 0 auto;
+    padding: 60px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #383737;
+    margin-top: 30px;
+    box-shadow: 6px 6px 15px rgb(8, 8, 8);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 80px;
+    margin-top: 10px;
+    margin-left: 69px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    
+}

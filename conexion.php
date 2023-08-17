@@ -6,7 +6,7 @@
 
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'id21140238_rlsr');
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'Dtge.*Pe1');
 define('DB_NAME', 'id21140238_baselodging');
 
 /*Attempt to connect to mysql database*/
